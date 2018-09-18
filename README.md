@@ -7,7 +7,7 @@ API de búsqueda por numero o razón social del REGISTRO ÚNICO DEL CONTRIBUYENT
 
 https://apiv1-ruc-py.herokuapp.com/api/rucs/name/razon%20social
 
-Devuelve 20 documentos ordenados de forma Ascendente que coincidan con el string enviados, el tamaño del string de ser **igual o mayor a 4**
+Devuelve 20 documentos ordenados de forma Ascendente que coincidan con el string enviados, el tamaño del string debe de ser **igual o mayor a 4**
 
 **Importante** poner apellidos primero (trabajando en este problema)
 
@@ -89,7 +89,7 @@ https://apiv1-ruc-py.herokuapp.com/api/rucs/name/presidencia
     ]
 }
 ```
-devuelve todos los documentos que en la razón social contenga **presidencia**
+devuelve los 20 primero documentos ordenados de forma acendente que en la razón social contenga **presidencia**
 
 
 ### Para buscar por número de RUC
