@@ -1,5 +1,5 @@
 # api-ruc-py
-API de búsqueda por numero o razón social del REGISTRO ÚNICO DEL CONTRIBUYENTE 
+API de búsqueda por numero o razón social del REGISTRO ÚNICO DEL CONTRIBUYENTE DEL PARAGUAY
 
 >>*desarrollada en nodejs y mongoDB*
 
