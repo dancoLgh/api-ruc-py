@@ -92,7 +92,7 @@ devuelve todos los documentos que en la razón social contenga **presidencia**
 
 ### Para buscar por número de RUC
 
-https://apiv1-ruc-py.herokuapp.com/apiV1/SearchRucForName/<numeroRuc>
+https://apiv1-ruc-py.herokuapp.com/apiV1/SearchRucForNumber/<numeroRuc>
 
 devuelve el documento con el que coincida el número de ruc, el ruc no debe contener el digito verificador
 
@@ -101,7 +101,7 @@ devuelve el documento con el que coincida el número de ruc, el ruc no debe cont
 **~~50080935-1~~(incorrecto)**
 
 ###### Ejemplo:
-https://apiv1-ruc-py.herokuapp.com/apiV1/SearchRucForName/80009837
+https://apiv1-ruc-py.herokuapp.com/apiV1/SearchRucForNumber/80009837
 
 ```
 {
