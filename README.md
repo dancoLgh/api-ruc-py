@@ -1,7 +1,7 @@
 # api-ruc-py
 API de búsqueda por numero o razón social del REGISTRO ÚNICO DEL CONTRIBUYENTE DEL PARAGUAY
 
->>*desarrollada en nodejs y mongoDB*
+*desarrollada en nodejs y mongoDB*
 
 ### Para buscar por razón social: 
 
@@ -89,7 +89,7 @@ https://apiv1-ruc-py.herokuapp.com/api/rucs/name/presidencia
     ]
 }
 ```
-devuelve los 20 primero documentos ordenados de forma acendente que en la razón social contenga **presidencia**
+devuelve los 20 primeros documentos ordenados de forma acendente que en la razón social contenga **presidencia**
 
 
 ### Para buscar por número de RUC
@@ -120,6 +120,8 @@ https://apiv1-ruc-py.herokuapp.com/api/rucs/ruc/80009837
 
 ```
 Devuelve un documento que coincide con el número de ruc 
+
+
 
 La api esta en fase BETA y con servidor en heroku GRATIS al igual que la base de datos en mLab, así que la respuesta no será la más rápida.
 Cualquier duda o sugerencia estoy a disposición de la comunidad 
