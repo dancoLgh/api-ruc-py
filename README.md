@@ -9,7 +9,7 @@ https://apiv1-ruc-py.herokuapp.com/apiV1/SearchRucForName/<razon%social>
 
 Devuelve todos los documentos que coincidan con el string enviados, el tamaño del string de ser **igual o mayor a 4**
 
-**Importante**poner apellidos primero (trabajando en este problema)
+**Importante** poner apellidos primero (trabajando en este problema)
 
 ##### ejemplo:
 
