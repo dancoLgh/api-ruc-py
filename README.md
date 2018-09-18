@@ -5,7 +5,7 @@ API de búsqueda por numero o razón social del REGISTRO ÚNICO DEL CONTRIBUYENT
 
 ### Para buscar por razón social: 
 
-https://apiv1-ruc-py.herokuapp.com/apiV1/rucs/name/<razon%social>
+https://apiv1-ruc-py.herokuapp.com/api/rucs/name/<razon%social>
 
 Devuelve todos los documentos que coincidan con el string enviados, el tamaño del string de ser **igual o mayor a 4**
 
@@ -13,7 +13,7 @@ Devuelve todos los documentos que coincidan con el string enviados, el tamaño d
 
 ##### ejemplo:
 
-https://apiv1-ruc-py.herokuapp.com/apiV1/rucs/name/vice%20presidencia%20de%20la%20republica
+https://apiv1-ruc-py.herokuapp.com/api/rucs/name/vice%20presidencia%20de%20la%20republica
 
 ```
 {
@@ -31,7 +31,7 @@ https://apiv1-ruc-py.herokuapp.com/apiV1/rucs/name/vice%20presidencia%20de%20la%
 ```
 devuelve un solo documento
 
-https://apiv1-ruc-py.herokuapp.com/apiV1/rucs/name/vice%20presidencia
+https://apiv1-ruc-py.herokuapp.com/api/rucs/name/vice%20presidencia
 
 
 ```
@@ -94,7 +94,7 @@ devuelve todos los documentos que en la razón social contenga **presidencia**
 
 ### Para buscar por número de RUC
 
-https://apiv1-ruc-py.herokuapp.com/apiV1/SearchRucForNumber/<numeroRuc>
+https://apiv1-ruc-py.herokuapp.com/api/rucs/ruc/<numeroRuc>
 
 devuelve el documento con el que coincida el número de ruc, el ruc no debe contener el digito verificador
 
@@ -103,7 +103,7 @@ devuelve el documento con el que coincida el número de ruc, el ruc no debe cont
 **~~80009837-4~~(incorrecto)**
 
 ###### Ejemplo:
-https://apiv1-ruc-py.herokuapp.com/apiV1/rucs/ruc/80009837
+https://apiv1-ruc-py.herokuapp.com/api/rucs/ruc/80009837
 
 ```
 {
