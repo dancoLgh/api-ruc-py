@@ -7,7 +7,7 @@ API de búsqueda por numero o razón social del REGISTRO ÚNICO DEL CONTRIBUYENT
 
 https://apiv1-ruc-py.herokuapp.com/api/rucs/name/razon%20social
 
-Devuelve todos los documentos que coincidan con el string enviados, el tamaño del string de ser **igual o mayor a 4**
+Devuelve 20 documentos ordenados de forma Ascendente que coincidan con el string enviados, el tamaño del string de ser **igual o mayor a 4**
 
 **Importante** poner apellidos primero (trabajando en este problema)
 
@@ -31,7 +31,7 @@ https://apiv1-ruc-py.herokuapp.com/api/rucs/name/vice%20presidencia%20de%20la%20
 ```
 devuelve un solo documento
 
-https://apiv1-ruc-py.herokuapp.com/api/rucs/name/vice%20presidencia
+https://apiv1-ruc-py.herokuapp.com/api/rucs/name/presidencia
 
 
 ```
@@ -39,52 +39,52 @@ https://apiv1-ruc-py.herokuapp.com/api/rucs/name/vice%20presidencia
     "success": [
         {
             "RucAnterior": 0,
-            "_id": "5b9f016838277738b48621ad",
-            "Ruc": 80004761,
-            "Dv": 3,
-            "RazonSocial": "GABINETE MILITAR- SERVICIOS DE LA PRESIDENCIA DE LA RCA."
-        },
-        {
-            "RucAnterior": 0,
-            "_id": "5b9f019038277738b487a98a",
-            "Ruc": 80047012,
-            "Dv": 5,
-            "RazonSocial": "SINDICATO DE FUNCIONARIOS DE LA PRESIDENCIA DE LA REPUBLICA"
-        },
-        {
-            "RucAnterior": 0,
-            "_id": "5b9f01a638277738b4891173",
-            "Ruc": 80007143,
-            "Cv": 3,
-            "RazonSocial": "REGIMIENTO  GUARDIA PRESIDENCIAL"
-        },
-        {
-            "RucAnterior": 0,
-            "_id": "5b9f01a738277738b4891eeb",
+            "_id": "5ba08c3d3827773c8cc641ab",
             "Ruc": 80044453,
-            "Dv": 1,
-            "RazonSocial": "ASOCIACION DE FUNCIONARIOS DE LA PRESIDENCIA DE LA REPUBLICA"
+            "RazonSocial": "ASOCIACION DE FUNCIONARIOS DE LA PRESIDENCIA DE LA REPUBLICA",
+            "Dv": 1
         },
         {
             "RucAnterior": 0,
-            "_id": "5b9f01db38277738b48c0404",
-            "Ruc": 80015275,
-            "Dv": 1,
-            "RazonSocial": "PRESIDENCIA DE LA REPUBLICA - SECRETARIA DE ACCION SOCIAL"
+            "_id": "5ba08c383827773c8cc3446d",
+            "Ruc": 80004761,
+            "RazonSocial": "GABINETE MILITAR- SERVICIOS DE LA PRESIDENCIA DE LA RCA.",
+            "Dv": 3
         },
         {
             "RucAnterior": 0,
-            "_id": "5b9f021b38277738b48d7db6",
+            "_id": "5ba08c493827773c8ccaa076",
             "Ruc": 80020056,
-            "Dv": 0,
-            "RazonSocial": "PRESIDENCIA DE LA REPUBLICA - GABINETE CIVIL"
+            "RazonSocial": "PRESIDENCIA DE LA REPUBLICA - GABINETE CIVIL",
+            "Dv": 0
         },
         {
             "RucAnterior": 0,
-            "_id": "5b9f026738277738b48eef3a",
+            "_id": "5ba08c443827773c8cc926c4",
+            "Ruc": 80015275,
+            "RazonSocial": "PRESIDENCIA DE LA REPUBLICA - SECRETARIA DE ACCION SOCIAL",
+            "Dv": 1
+        },
+        {
+            "RucAnterior": 0,
+            "_id": "5ba08c3d3827773c8cc63433",
+            "Ruc": 80007143,
+            "RazonSocial": "REGIMIENTO  GUARDIA PRESIDENCIAL",
+            "Dv": 3
+        },
+        {
+            "RucAnterior": 0,
+            "_id": "5ba08c3b3827773c8cc4cc4a",
+            "Ruc": 80047012,
+            "RazonSocial": "SINDICATO DE FUNCIONARIOS DE LA PRESIDENCIA DE LA REPUBLICA",
+            "Dv": 5
+        },
+        {
+            "RucAnterior": 0,
+            "_id": "5ba08c4b3827773c8ccc11fa",
             "Ruc": 80009837,
-            "Dv": 4,
-            "RazonSocial": "VICE PRESIDENCIA DE LA REPUBLICA"
+            "RazonSocial": "VICE PRESIDENCIA DE LA REPUBLICA",
+            "Dv": 4
         }
     ]
 }
