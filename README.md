@@ -96,9 +96,9 @@ https://apiv1-ruc-py.herokuapp.com/apiV1/SearchRucForNumber/<numeroRuc>
 
 devuelve el documento con el que coincida el número de ruc, el ruc no debe contener el digito verificador
 
-**50080395(correcto)**
+**80009837(correcto)**
 
-**~~50080935-1~~(incorrecto)**
+**~~80009837-4~~(incorrecto)**
 
 ###### Ejemplo:
 https://apiv1-ruc-py.herokuapp.com/apiV1/SearchRucForNumber/80009837
