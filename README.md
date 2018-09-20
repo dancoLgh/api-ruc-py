@@ -89,7 +89,7 @@ https://apiv1-ruc-py.herokuapp.com/api/rucs/name/presidencia
     ]
 }
 ```
-devuelve un Send() son los 20 primeros documentos ordenados de forma acendente que en la razón social contenga **presidencia**
+devuelve un Send() con los 20 primeros documentos ordenados de forma acendente que en la razón social contenga **presidencia**
 
 
 ### Para buscar por número de RUC
