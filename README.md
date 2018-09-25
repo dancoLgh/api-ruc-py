@@ -7,7 +7,7 @@ API de búsqueda por numero o razón social del REGISTRO ÚNICO DEL CONTRIBUYENT
 
 https://apiv1-ruc-py.herokuapp.com/api/rucs/name/razon%20social
 
-Devuelve un Send() con 20 documentos ordenados de forma Ascendente que coincidan con el string enviados, el tamaño del string debe de ser **igual o mayor a 4** 
+Devuelve un Send() con 20 documentos ordenados de forma Ascendente que coincidan con el string enviados, el tamaño del string debe de ser **igual o mayor a 2** 
 
 **Importante** poner apellidos primero (trabajando en este problema)
 
