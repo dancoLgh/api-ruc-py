@@ -9,7 +9,7 @@ const Ruc = require("../model/modelRuc.js")
 function getRucForNumber(req,res)
 {
 
-    let ruc=req.params.Ruc
+    let ruc=req.query.ruc
     let limiteRuc=req.query.limit
     let order=req.query.order
 

@@ -8,7 +8,7 @@ const Ruc = require("../model/modelRuc.js")
 
 function getRucForName (req,res)
 {
-    let razonSocial=req.params.RazonSocial
+    let razonSocial=req.query.razonSocial
     let limite=req.query.limit
     let order=req.query.order
     order=parseInt(order)
