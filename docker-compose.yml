@@ -1,0 +1,13 @@
+version: '3'
+services:
+  www:
+
+    volumes:
+      - .:/opt/app/
+    ports:
+      - '80:80'
+    build:
+      context: .
+    restart: always
+
+

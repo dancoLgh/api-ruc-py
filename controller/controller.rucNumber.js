@@ -9,11 +9,12 @@ const Ruc = require("../model/modelRuc.js")
 function getRucForNumber(req,res)
 {
 
-    let ruc=req.params.Ruc
+    let ruc=req.query.ruc
     let limiteRuc=req.query.limit
     let order=req.query.order
 
     order=parseInt(order)
+
 
     //pregunto se el ordern es disto de -1 o 0 para poner 1 (defaul)
     if(order!=-1&&order!=0)
@@ -59,9 +60,9 @@ function getRucForNumber(req,res)
                     {
                         return res.status(500).send({message:`Error al realizar petición: ${error}`})  
                     }
-                    if(success==null)
+                    if(success=="")
                     {
-                        return res.status(404).send({message:"No existe el RUC", ruc})
+                        return res.status(404).send({message:`No existe el RUC: ${ruc}`})
                     }
                         res.status(200).send({success})
                 }).limit(limiteRuc)
@@ -75,12 +76,12 @@ function getRucForNumber(req,res)
                     {
                         return res.status(500).send({message:`Error al realizar petición: ${error}`})  
                     }
-                    if(success==null)
+                    if(success=="")
                     {
-                        return res.status(404).send({message:"No existe el RUC", ruc})
+                        return res.status(404).send({message:`No existe el RUC: ${ruc}`})
                     }
                         res.status(200).send({success, limiteRuc, order})
-                }).sort({RazonSocial:order}).limit(limiteRuc)
+                }).sort({razon_social:order}).limit(limiteRuc)
             }
         }
     }

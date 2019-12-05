@@ -8,11 +8,12 @@ const Ruc = require("../model/modelRuc.js")
 
 function getRucForName (req,res)
 {
-    let razonSocial=req.params.RazonSocial
+    let razonSocial=req.query.razonSocial
     let limite=req.query.limit
     let order=req.query.order
     order=parseInt(order)
 
+    
     //Convierte el limite en int
     if(limite!=null)
     {
@@ -37,9 +38,9 @@ function getRucForName (req,res)
         return res.status(404).send({message:"error"})
     }
     //Valida que el string de la razon social no se menor a 4
-    if(razonSocial.length<2)
+    if(razonSocial.length<4)
     {
-        return res.status(404).send({message:`error:  String length ${razonSocial.length}<2`})
+        return res.status(404).send({message:`error:  String length ${razonSocial.length}<4`})
     }
     else
     {  //Vaalida que el limite no sea mayor 50
@@ -53,15 +54,15 @@ function getRucForName (req,res)
             if(order==0)
             {
                 razonSocial=razonSocial.toUpperCase();
-                Ruc.find({RazonSocial: { $regex: razonSocial } }, function(error,success)
+                Ruc.find({razon_social: { $regex: razonSocial } }, function(error,success)
                 {
                     if(error)
                     {
                         return res.status(500).send({message:`Error al realizar petición: ${error}`})            
                     }
-                    if(success=="")
+                    if(success==null||success==[])
                     {
-                        return res.status(404).send({message:"No existe la Razon Social"})
+                        return res.status(404).send({message:`No existe la Razon Social: ${razonSocial}`})
                     }
                     res.status(200).send({success, limite,order})
                 }).limit(limite)
@@ -78,7 +79,7 @@ function getRucForName (req,res)
                     }
                     if(success=="")
                     {
-                        return res.status(404).send(success)
+                        return res.status(404).send({message:`No existe la Razon Social: ${razonSocial}`})
                     }
                     res.status(200).send({success, limite,order})
                 }).sort({razon_social:order}).limit(limite)
@@ -89,5 +90,5 @@ function getRucForName (req,res)
 }
 
 module.exports={
-    getRucForName,
+    getRucForName
 };  
