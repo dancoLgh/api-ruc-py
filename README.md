@@ -122,6 +122,6 @@ Devuelve un status 200 con el documento que coincide con el número de ruc
 
 
 
-La api esta en fase BETA y con servidor en heroku GRATIS al igual que la base de datos en mLab, así que la respuesta no será la más rápida.
+La api esta en fase BETA y con servidor en openode GRATIS al igual que la base de datos en mLab, así que la respuesta no será la más rápida.
 Cualquier duda o sugerencia estoy a disposición de la comunidad 
 
