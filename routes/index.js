@@ -8,9 +8,9 @@ const auth = require('../middlewares/auth')
 const userCtrl=require("../controller/user.js")
 const Ruc = require("../model/modelRuc.js")
 
-api.get("/number/:Ruc/", RucControllerNumber.getRucForNumber);
+
 api.get("/number",RucControllerNumber.getRucForNumber);
-api.get("/name/:RazonSocial/",RucControllerName.getRucForName);
+api.get("/name",RucControllerName.getRucForName);
 
 
 

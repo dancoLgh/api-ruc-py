@@ -53,7 +53,7 @@ function getRucForName (req,res)
             if(order==0)
             {
                 razonSocial=razonSocial.toUpperCase();
-                Ruc.find({RazonSocial: { $regex: razonSocial } }, function(error,success)
+                Ruc.find({razon_social: { $regex: razonSocial } }, function(error,success)
                 {
                     if(error)
                     {
@@ -78,7 +78,7 @@ function getRucForName (req,res)
                     }
                     if(success=="")
                     {
-                        return res.status(404).send(success)
+                        return res.status(404).send({message:`No existe la Razon Social: ${razonSocial}`})
                     }
                     res.status(200).send({success, limite,order})
                 }).sort({razon_social:order}).limit(limite)
@@ -89,5 +89,5 @@ function getRucForName (req,res)
 }
 
 module.exports={
-    getRucForName,
+    getRucForName
 };  

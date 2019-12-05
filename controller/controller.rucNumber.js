@@ -59,9 +59,9 @@ function getRucForNumber(req,res)
                     {
                         return res.status(500).send({message:`Error al realizar petición: ${error}`})  
                     }
-                    if(success==null)
+                    if(success=="")
                     {
-                        return res.status(404).send({message:"No existe el RUC", ruc})
+                        return res.status(404).send({message:`No existe el RUC: ${ruc}`})
                     }
                         res.status(200).send({success})
                 }).limit(limiteRuc)
@@ -75,12 +75,12 @@ function getRucForNumber(req,res)
                     {
                         return res.status(500).send({message:`Error al realizar petición: ${error}`})  
                     }
-                    if(success==null)
+                    if(success=="")
                     {
-                        return res.status(404).send({message:"No existe el RUC", ruc})
+                        return res.status(404).send({message:`No existe el RUC: ${ruc}`})
                     }
-                        res.status(200).send({success, limiteRuc, order})
-                }).sort({RazonSocial:order}).limit(limiteRuc)
+                        res.status(200).send({success})
+                }).sort({razon_social:order}).limit(limiteRuc)
             }
         }
     }
