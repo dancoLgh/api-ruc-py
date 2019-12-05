@@ -1,125 +1,124 @@
 # api-ruc-py
 API de búsqueda por numero o razón social del REGISTRO ÚNICO DEL CONTRIBUYENTE DEL PARAGUAY
 
-*desarrollada en nodejs y mongoDB*
+*desarrollada en nodejs express y mongoDB*
+
+### Los parametros de consultas son:
+#### ruc : es el numero del contribuyente regitrado en la SET *(debe ser mayor o igula a 3 digitos)*
+#### razaonSocial: es el nombre del contribuyente 
+#### limit : es para establecer un limite de resultados, por defecto devuelve los primeros 20  registros *(rango de 0 a 50)*
+#### order: es para ordenar la razon social de forma asecndente o desendete por defecto 1 *(acendente=0, desendente=1)*
+
 
 ### Para buscar por razón social: 
 
-https://apiv1-ruc-py.herokuapp.com/api/rucs/name/razon%20social
+http://api-ruc-py.openode.io/ruc/name
 
-Devuelve un Send() con 20 documentos ordenados de forma Ascendente que coincidan con el string enviados, el tamaño del string debe de ser **igual o mayor a 2** 
+Devuelve un Send() con 20 documentos ordenados de forma Ascendente que coincidan con el string enviados, el tamaño del string debe de ser **igual o mayor a 4** 
 
-**Importante** poner apellidos primero (trabajando en este problema)
+**Importante** poner apellidos primero para que de un mejor resultado(trabajando en este problema)
+
 
 ##### ejemplo:
 
-https://apiv1-ruc-py.herokuapp.com/api/rucs/name/vice%20presidencia%20de%20la%20republica
+http://api-ruc-py.openode.io/ruc/name?razonSocial=vice%20presidencia%20de%20la%20republica
 
 ```
 {
     "success": [
         {
-            "RucAnterior": 0,
-            "_id": "5b9f026738277738b48eef3a",
-            "Ruc": 80009837,
-            "Dv": 4,
-            "RazonSocial": "VICE PRESIDENCIA DE LA REPUBLICA"
+            "_id": "5cbf22bab7e81c283c294524",
+            "ruc": "80009837",
+            "razon_social": "VICE PRESIDENCIA DE LA REPUBLICA",
+            "dv": "4"
         }
-    ]
+    ],
+    "limite": 20,
+    "order": 1
 }
 
 ```
-devuelve un solo documento
 
-https://apiv1-ruc-py.herokuapp.com/api/rucs/name/presidencia
+devuelve un status 200 con un solo documento
+
+http://api-ruc-py.openode.io/ruc/name?razonSocial=presidencia
 
 
 ```
 {
     "success": [
         {
-            "RucAnterior": 0,
-            "_id": "5ba08c3d3827773c8cc641ab",
-            "Ruc": 80044453,
-            "RazonSocial": "ASOCIACION DE FUNCIONARIOS DE LA PRESIDENCIA DE LA REPUBLICA",
-            "Dv": 1
+            "_id": "5cbf226cb7e81c283c232e6e",
+            "ruc": "80044453",
+            "razon_social": "ASOCIACION DE FUNCIONARIOS DE LA PRESIDENCIA DE LA REPUBLICA",
+            "dv": "1"
         },
         {
-            "RucAnterior": 0,
-            "_id": "5ba08c383827773c8cc3446d",
-            "Ruc": 80004761,
-            "RazonSocial": "GABINETE MILITAR- SERVICIOS DE LA PRESIDENCIA DE LA RCA.",
-            "Dv": 3
+            "_id": "5cbf2240b7e81c283c200deb",
+            "ruc": "80004761",
+            "razon_social": "GABINETE MILITAR- SERVICIOS DE LA PRESIDENCIA DE LA RCA.",
+            "dv": "3"
         },
         {
-            "RucAnterior": 0,
-            "_id": "5ba08c493827773c8ccaa076",
-            "Ruc": 80020056,
-            "RazonSocial": "PRESIDENCIA DE LA REPUBLICA - GABINETE CIVIL",
-            "Dv": 0
+            "_id": "5cbf22a7b7e81c283c27c247",
+            "ruc": "80020056",
+            "razon_social": "PRESIDENCIA DE LA REPUBLICA - GABINETE CIVIL",
+            "dv": "0"
         },
         {
-            "RucAnterior": 0,
-            "_id": "5ba08c443827773c8cc926c4",
-            "Ruc": 80015275,
-            "RazonSocial": "PRESIDENCIA DE LA REPUBLICA - SECRETARIA DE ACCION SOCIAL",
-            "Dv": 1
+            "_id": "5cbf226bb7e81c283c2320f6",
+            "ruc": "80007143",
+            "razon_social": "REGIMIENTO  GUARDIA PRESIDENCIAL",
+            "dv": "3"
         },
         {
-            "RucAnterior": 0,
-            "_id": "5ba08c3d3827773c8cc63433",
-            "Ruc": 80007143,
-            "RazonSocial": "REGIMIENTO  GUARDIA PRESIDENCIAL",
-            "Dv": 3
+            "_id": "5cbf2257b7e81c283c21a7d1",
+            "ruc": "80047012",
+            "razon_social": "SINDICATO DE FUNCIONARIOS DE LA PRESIDENCIA DE LA REPUBLICA",
+            "dv": "5"
         },
         {
-            "RucAnterior": 0,
-            "_id": "5ba08c3b3827773c8cc4cc4a",
-            "Ruc": 80047012,
-            "RazonSocial": "SINDICATO DE FUNCIONARIOS DE LA PRESIDENCIA DE LA REPUBLICA",
-            "Dv": 5
-        },
-        {
-            "RucAnterior": 0,
-            "_id": "5ba08c4b3827773c8ccc11fa",
-            "Ruc": 80009837,
-            "RazonSocial": "VICE PRESIDENCIA DE LA REPUBLICA",
-            "Dv": 4
+            "_id": "5cbf22bab7e81c283c294524",
+            "ruc": "80009837",
+            "razon_social": "VICE PRESIDENCIA DE LA REPUBLICA",
+            "dv": "4"
         }
-    ]
+    ],
+    "limite": 20,
+    "order": 1
 }
 ```
-devuelve un Send() con los 20 primeros documentos ordenados de forma acendente que en la razón social contenga **presidencia**
+devuelve un status 200 con los 20 primeros documentos ordenados de forma decendente que en la razón social contenga **presidencia**
 
 
 ### Para buscar por número de RUC
 
 https://apiv1-ruc-py.herokuapp.com/api/rucs/ruc/numeroRuc
 
-devuelve un Send() con el documento que coincida el número de ruc, el ruc no debe contener el digito verificador
+devuelve Send() con el documento que coincida el número de ruc, el ruc no debe contener el digito verificador
 
 **80009837(correcto)**
 
 **~~80009837-4~~(incorrecto)**
 
 ###### Ejemplo:
-https://apiv1-ruc-py.herokuapp.com/api/rucs/ruc/80009837
+http://api-ruc-py.openode.io/ruc/number?ruc=80009837
 
 ```
 {
     "success": [
         {
-            "RucAnterior": 0,
-            "_id": "5b9f026738277738b48eef3a",
-            "Ruc": 80009837,
-            "Dv": 4,
-            "RazonSocial": "VICE PRESIDENCIA DE LA REPUBLICA"
+            "_id": "5cbf22bab7e81c283c294524",
+            "ruc": "80009837",
+            "razon_social": "VICE PRESIDENCIA DE LA REPUBLICA",
+            "dv": "4"
         }
-    ]
+    ],
+    "limiteRuc": 20,
+    "order": 1
 }
-
 ```
-Devuelve un Send() con el documento que coincide con el número de ruc 
+Devuelve un status 200 con el documento que coincide con el número de ruc 
 
 
 
