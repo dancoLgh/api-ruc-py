@@ -17,7 +17,7 @@
     "express-handlebars": "^3.0.0",
     "jwt-simple": "^0.5.1",
     "moment": "^2.22.2",
-    "mongoose": "^5.7.13",
+    "mongoose": "^6.13.6",
     "morgan": "^1.9.1"
   },
   "devDependencies": {
